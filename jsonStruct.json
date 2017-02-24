@@ -1,0 +1,53 @@
+{
+    "0":{
+        "nodeType": "h1",
+        "innerHTML": "JSON to HTML libary",
+        "style": "text-align: centre;"
+    },
+
+    "1":{
+        "nodeType": "div",
+        "class": "wrapper",
+        "id": "main",
+
+        "children":{
+            "0":{
+                "nodeType": "p",
+                "innerHTML": "Welcome to the test page of the JSON to HTML libraray. I hope you will enjoy my work ! Don't hesitate to like it !"
+            },
+
+            "1":{
+                "nodeType": "p",
+                "innerHTML": "Please note that this project and all its sources are 'of course' free and open source..."
+            },
+
+            "2":{
+                "nodeType": "input",
+                "type": "button",
+                "value": "Say something !",
+                "onclick": "alert('Hello user !');"
+            }
+        }
+    },
+
+    "2":{
+        "nodeType": "table",
+        "border": "1",
+        
+        "children": {
+            "tr":{
+                "children":{
+                    "0": {
+                        "nodeType": "td",
+                        "autofill": "%1"
+                    },
+
+                    "1": {
+                        "nodeType": "td",
+                        "autofill": "%2"
+                    }
+                }
+            }
+        }
+    }
+}

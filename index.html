@@ -1,0 +1,44 @@
+<!-- 
+    JSON TO HTML
+
+    (c) Pierre HUBERT 2017
+
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Json to html project</title>
+
+        <script src="jsonToHtml.js"></script>
+    </head>
+    <body>
+        <!-- Test the library -->
+        <script>
+            //Get the JSON source with a simple AJAX request
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "jsonStruct.json");
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState == 4 && xhr.status == 200){
+                    //Convert JSON text to JSON object
+                    var JSONobject = JSON.parse(xhr.responseText);
+
+                    //Fake data values
+                    var values = {
+                        "%1": "Value added by the function on json process #1",
+                        "%2": "Value added by the function on json process #2",
+                    }
+
+                    //Process content
+                    var HTMLobjects = JSONtoHTML(JSONobject, values);
+                    
+                    //Apply result
+                    document.body.appendChild(HTMLobjects[0]);
+                    document.body.appendChild(HTMLobjects[1]);
+                    document.body.appendChild(HTMLobjects[2]);
+                }
+            };
+            xhr.send(null);
+        </script>
+    </body>
+</html>
